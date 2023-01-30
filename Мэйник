@@ -1,0 +1,23 @@
+#include<iostream> //Первый
+#include<vector>
+#include"easy-list.h"
+
+using namespace std;
+
+int main()
+{
+    int n, k;
+    cin >> n;
+    vector <int> mass1(n, 0);
+    vector <int> mass2 (0, 0);
+    for (int i = 0; i < mass1.size(); i++){
+     cin >> k;
+     mass1[i] = k;
+
+    }
+    itc_even_index_list(mass1, mass2);
+    for (int i = 0; i < mass2.size(); i++)
+        cout << mass2[i] << " ";
+
+    return 0;
+}
