@@ -12,7 +12,7 @@ void itc_even_index_list(const vector <int> &mass, vector <int> &mass2) //Number
                 mass2.push_back(mass[i]);
 }
 
-void itc_even_part_list (const vector <int> &mass1, vector <int> &mass2)//Number 2
+void itc_even_parts_list (const vector <int> &mass1, vector <int> &mass2)//Number 2
 {
     int i;
     for (i = 0; i < mass1.size(); i++)
