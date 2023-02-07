@@ -1,6 +1,6 @@
-#include<iostream> //Первый
+#include<iostream>
 #include<vector>
-#include"easy-list.h"
+#include"easy_list.h"
 
 using namespace std;
 
