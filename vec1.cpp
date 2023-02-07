@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include"easy-list.h"
+#include"easy_list.h"
 using namespace std;
 
 void itc_even_index_list(const vector <int> &mass, vector <int> &mass2) //Number 1
