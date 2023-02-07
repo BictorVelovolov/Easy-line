@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include"easy-list.h"
+#include"easy_list.h"
 using namespace std;
 
 void itc_rev_list(const vector <int> &mass)//Number 6
