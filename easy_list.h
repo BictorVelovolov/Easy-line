@@ -1,5 +1,5 @@
-#ifndef EASY-LIST_H_INCLUDED
-#define EASY-LIST_H_INCLUDED
+#ifndef EASY_LIST_H_INCLUDED
+#define EASY_LIST_H_INCLUDED
 #include<vector>
 using namespace std;
 void itc_even_index_list(const vector <int> &mass, vector <int> &mass2); //№1
