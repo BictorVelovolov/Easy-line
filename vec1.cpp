@@ -44,10 +44,9 @@ int itc_sl_list(const vector <int> &mass)//Number 4
 
 bool itc_same_parts_list(const vector <int> &mass)//Number 5
 {
-    int i, kol;
-    kol = 0;
+    int i;
     for (i = 0; i < mass.size(); i++)
         if((mass[i] > 0 && mass[i - 1] > 0) || (mass[i] < 0 && mass[i - 1] < 0))
-            kol++;
-    return kol;
+            return 1;
+        return 0;
 }
