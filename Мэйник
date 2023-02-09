@@ -6,18 +6,23 @@ using namespace std;
 
 int main()
 {
-    int n, k;
+    int n, k, mov;
+    cout << "enter move: ";
+    cin >> mov;
+    cout << "enter kol-vo of vector: ";
     cin >> n;
     vector <int> mass1(n, 0);
     vector <int> mass2 (0, 0);
     for (int i = 0; i < mass1.size(); i++){
+     cout << "enter " << i+1 << "vector's meaning: ";
      cin >> k;
      mass1[i] = k;
 
     }
-    itc_even_index_list(mass1, mass2);
-    for (int i = 0; i < mass2.size(); i++)
-        cout << mass2[i] << " ";
+    itc_rshift_list(mass1);
+    for (int i = 0; i < mass1.size(); i++)
+        cout << mass1[i] << " ";
 
     return 0;
 }
+//Я начал делать девятое просто :)
