@@ -5,10 +5,19 @@ using namespace std;
 
 void itc_rev_list(vector <int> &mass)//Number 6
 {
-    int i;
-    if (mass.size() > 0)
-        for (i = mass.size(); i > 0; i--)
-            cout << mass[i - 1] << " ";
+    int i, len;
+    len = mass.size();
+    if (len > 0)
+        for (i = 0; i < len/2 + len%2; i++)
+        {
+                if(mass[i] != mass[len - (i+1)])
+                {
+                    mass[i] = mass[len-(i+1)] + mass[i];
+                    mass[len - (i+1)] = mass[i] - mass[len - (i+1)];
+                    mass[i] = mass[i] - mass[len - (i+1)];
+                }
+        }
+
 }
 
 void itc_rev_par_list(vector <int> &mass)//Number 7
@@ -29,8 +38,18 @@ void itc_rev_par_list(vector <int> &mass)//Number 7
                     mass[i] = mass[i+1] + mass[i];
                     mass[i+1] = mass[i] - mass[i+1];
                     mass[i] = mass[i] - mass[i+1];
-                }
-            }
+               }
+
         }
 
+    }
+}
+
+void itc_rshift_list(vector <int> &mass){ //Number 8
+    int i, cif;
+    i = mass.size();
+    cif = mass[mass.size() - 1];
+    for(i; i > 0; i--)
+        mass[i] = mass[i - 1];
+    mass[0] = cif;
 }
