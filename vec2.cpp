@@ -45,11 +45,33 @@ void itc_rev_par_list(vector <int> &mass)//Number 7
     }
 }
 
-void itc_rshift_list(vector <int> &mass){ //Number 8
+void itc_rshift_list(vector <int> &mass){
     int i, cif;
-    i = mass.size();
-    cif = mass[mass.size() - 1];
+    i = mass.size() - 1;
+    cif = mass[i];
     for(i; i > 0; i--)
         mass[i] = mass[i - 1];
     mass[0] = cif;
+}
+
+void itc_lshift_list(vector <int> &mass){
+    int i, cif;
+    i = 1;
+    cif = mass[0];
+    for(i; i < mass.size(); i++)
+        mass[i - 1] = mass[i];
+    mass[mass.size() - 1] = cif;
+}
+
+void itc_super_shift_list(vector <int> &mass, int n){
+    int i;
+    if (n > 0)
+        for (i = 0; i < n; i++)
+            itc_rshift_list(mass);
+    else
+    {
+        n = n * (- 1);
+        for (i = 0; i < n; i++)
+            itc_lshift_list(mass);
+    }
 }
